@@ -25,16 +25,9 @@ class DefaultController extends Controller
         $puzzle = new Xeeeveee\Sudoku\Puzzle();
         $puzzle->setCellSize($size);
         $puzzle->generatePuzzle();
-        if ($solution) {
-            $puzzle->solve();
-            $solution = $puzzle->getSolution();
-        }
+        $puzzle->solve();
 
-        return new Response(
-            $puzzle,
-            $solution
-        );
-
+        return new Response($puzzle);
     }
 
 }
