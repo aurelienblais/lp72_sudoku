@@ -1,12 +1,12 @@
 <template>
-  <countdown :countdown="countdown"></countdown>
+  <grid size=3></grid>
 </template>
 
 <script>
-import Countdown from '@/components/Countdown'
+import Grid from '@/components/Grid'
 
 export default {
-  components: { Countdown },
+  components: { Grid },
   name: 'HelloWorld',
   data: () => ({
     countdown: {
