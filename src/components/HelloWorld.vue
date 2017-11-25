@@ -9,21 +9,21 @@
         <h2>Choisissez une difficultée.</h2>
         <ul>
           <li>
-            <input type="radio" id="f-option-facile" name="selector">
+            <input type="radio" id="f-option-facile" name="niveau">
             <label for="f-option-facile">Facile</label>
 
             <div class="check"></div>
           </li>
 
           <li>
-            <input type="radio" id="s-option-moyen" name="selector">
+            <input type="radio" id="s-option-moyen" name="niveau">
             <label for="s-option-moyen">Moyen</label>
 
             <div class="check"><div class="inside"></div></div>
           </li>
 
           <li>
-            <input type="radio" id="t-option-difficile" name="selector">
+            <input type="radio" id="t-option-difficile" name="niveau">
             <label for="t-option-difficile">Difficile</label>
 
             <div class="check"><div class="inside"></div></div>
@@ -33,21 +33,21 @@
         <h2>Choisissez une taille.</h2>
         <ul>
           <li>
-            <input type="radio" id="f-option-2" name="selector">
+            <input type="radio" id="f-option-2" name="taille">
             <label for="f-option-2">2</label>
 
             <div class="check"></div>
           </li>
 
           <li>
-            <input type="radio" id="s-option-3" name="selector">
+            <input type="radio" id="s-option-3" name="taille">
             <label for="s-option-3">3</label>
 
             <div class="check"><div class="inside"></div></div>
           </li>
 
           <li>
-            <input type="radio" id="t-option-4" name="selector">
+            <input type="radio" id="t-option-4" name="taille">
             <label for="t-option-4">4</label>
 
             <div class="check"><div class="inside"></div></div>
