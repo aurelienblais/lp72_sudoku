@@ -1,6 +1,18 @@
-# lp72_sudoku
+# Su Do Ku
 
-> sudoku utbm
+## RESPECTEZ LES PUTAINS DE REGLES DE NOMMAGE
+
+* On créer des branches, pas de commit sur master
+* On fait des jolies pull requests lorsqu'une branche doit être merge
+* Commit : verbe au présent, en anglais, majuscule au début, et on est clair dans ce qu'on dit
+* Tag : verbe au passé, en anglais, résumé des commits
+* Règle des tags : vMAJOR.MINOR.FIX (on passe pas de v0.0.1 à v1.0.0, merci)
+
+## Branches
+* feature/my-feature
+* fix/my-fix
+
+## Gloire au chef de projet, ANTHONY !
 
 ## Build Setup
 
@@ -16,12 +28,6 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
