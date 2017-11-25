@@ -54,7 +54,7 @@
           </li>
         </ul>
 
-        <input type="button" value="Générer la grille"/>
+        <input id="" type="button" value="Générer la grille"/>
       </div>
     </div>
   </div>
@@ -192,7 +192,5 @@ a {
      cursor: pointer;
      top: 4px;
      position: relative;
-
-   }
   }
 </style>
