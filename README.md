@@ -4,8 +4,8 @@
 
 * On créer des branches, pas de commit sur master
 * On fait des jolies pull requests lorsqu'une branche doit être merge
-* Commit : verbe au passé, en anglais, majuscule au début, et on est clair dans ce qu'on dit
-* Tag : verbe au présent, en anglais, résumé des commits
+* Commit : verbe au présent, en anglais, majuscule au début, et on est clair dans ce qu'on dit
+* Tag : verbe au passé, en anglais, résumé des commits
 * Règle des tags : vMAJOR.MINOR.FIX (on passe pas de v0.0.1 à v1.0.0, merci)
 
 ## Branches
