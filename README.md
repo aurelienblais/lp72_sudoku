@@ -8,4 +8,8 @@
 * Tag : verbe au présent, en anglais, résumé des commits
 * Règle des tags : vMAJOR.MINOR.FIX (on passe pas de v0.0.1 à v1.0.0, merci)
 
+## Branches
+* feature/my-feature
+* fix/my-fix
+
 ## Gloire au chef de projet, ANTHONY !
