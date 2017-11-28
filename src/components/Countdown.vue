@@ -12,7 +12,25 @@
 
 <script>
 export default {
-  props: ['countdown']
+  props: ['countdown'],
+  mounted () {
+    let interval = setInterval(() => {
+      if (this.countdown.seconds === 0) {
+        this.countdown.minutes--
+        this.countdown.seconds = 60
+      }
+      this.countdown.seconds--
+      if (this.countdown.minutes === 0 && this.countdown.seconds === 0) {
+        this.notify()
+        clearInterval(interval)
+      }
+    }, 1000)
+  },
+  methods: {
+    notify () {
+      this.$parent.$emit('end')
+    }
+  }
 }
 </script>
 

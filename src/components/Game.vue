@@ -6,14 +6,8 @@
               <button>Retry</button>
           </div>
       </div>
-      <b-container class="bv-example-row">
-          <b-row class="text-center">
-              <b-col sm="12">
-                  <grid size=2></grid>
-              </b-col>
-          </b-row>
-      </b-container>
     <countdown :countdown="countdown"></countdown>
+    <grid size=2></grid>
   </div>
 </template>
 
