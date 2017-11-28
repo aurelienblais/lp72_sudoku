@@ -3,7 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Xeeeveee;
 /**
  * Grid
  *
@@ -22,18 +22,11 @@ class Grid
     private $id;
 
     /**
-     * @var int
+     * @var Xeeeveee\Sudoku\Puzzle
      *
-     * @ORM\Column(name="size", type="integer")
+     * @ORM\Column(name="puzzle", type="array")
      */
-    private $size;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="difficulty", type="integer")
-     */
-    private $difficulty;
+    private $puzzle;
 
 
     /**
@@ -47,51 +40,27 @@ class Grid
     }
 
     /**
-     * Set size
+     * Set puzzle
      *
-     * @param integer $size
+     * @param Xeeeveee\Sudoku\Puzzle $puzzle
      *
      * @return Grid
      */
-    public function setSize($size)
+    public function setPuzzle($puzzle)
     {
-        $this->size = $size;
+        $this->puzzle = $puzzle;
 
         return $this;
     }
 
     /**
-     * Get size
+     * Get puzzle
      *
-     * @return int
+     * @return Xeeeveee\Sudoku\Puzzle
      */
-    public function getSize()
+    public function getPuzzle()
     {
-        return $this->size;
-    }
-
-    /**
-     * Set difficulty
-     *
-     * @param integer $difficulty
-     *
-     * @return Grid
-     */
-    public function setDifficulty($difficulty)
-    {
-        $this->difficulty = $difficulty;
-
-        return $this;
-    }
-
-    /**
-     * Get difficulty
-     *
-     * @return int
-     */
-    public function getDifficulty()
-    {
-        return $this->difficulty;
+        return $this->puzzle;
     }
 }
 
