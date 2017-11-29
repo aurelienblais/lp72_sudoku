@@ -1,6 +1,7 @@
 <template>
-    <input min="1" :max="max" :data-line="line" :data-column="column" v-on:change="update" type="number" v-if="value != 0" :value="value">
-    <input min="1" :max="max" :data-line="line" :data-column="column" v-on:change="update" type="number" v-else="">
+    <input class="browser-default" min="1" :max="max" :data-line="line" :data-column="column" v-on:change="update" type="number"
+           v-if="value != 0" :value="value" disabled>
+    <input class="browser-default" min="1" :max="max" :data-line="line" :data-column="column" v-on:change="update" type="number" v-else>
 </template>
 
 
@@ -17,8 +18,8 @@
 
 <style scoped>
     input {
-        display:table-cell;
-        width:94%;
+        display: table-cell;
+        width: 100%;
         height: 100%;
         text-align: center;
     }

@@ -17,16 +17,17 @@ class DefaultController extends Controller
 {
 
     /**
-     * @Rest\Get("/size/{size}")
+     * @Rest\Get("/size/{size}/filled/{filled}")
      * @param int $size
      * @return Response
      * @internal param $solution
      */
-    public function getAction(int $size) {
+    public function getAction(int $size, int $filled)
+    {
 
         $puzzle = new Xeeeveee\Sudoku\Puzzle();
         $puzzle->setCellSize($size);
-        $puzzle->generatePuzzle();
+        $puzzle->generatePuzzle($filled);
         $puzzle->solve();
 
         $grid = new Grid();
@@ -48,7 +49,8 @@ class DefaultController extends Controller
      * @param $uuid
      * @return Response
      */
-    public function postAction(Request $request, $uuid) {
+    public function postAction(Request $request, $uuid)
+    {
 
         $em = $this->getDoctrine()->getManager();
 
@@ -71,7 +73,9 @@ class DefaultController extends Controller
         }
 
         if ($res === true) {
-            //TODO: remove entity
+            $em = $this->getDoctrine()->getManager();
+            $grid = $em->getRepository('AppBundle:Grid')->find($uuid);
+            $em->remove($grid);
         }
 
         return new Response($res);

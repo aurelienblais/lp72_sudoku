@@ -1,35 +1,33 @@
 <template>
-  <div>
-      <div class="mask">
-          <div>
-              <h1>U LOOSE</h1>
-              <button>Retry</button>
-          </div>
-      </div>
-    <countdown :countdown="countdown"></countdown>
-    <grid size=2></grid>
-  </div>
+    <div>
+        <div class="mask">
+            <div>
+                <h1>Perdu !</h1>
+                <a v-on:click="reload" class="waves-effect waves-light btn">Rejouer</a>
+            </div>
+        </div>
+        <grid :difficulty="$route.query.difficulty" :size="$route.query.size"></grid>
+    </div>
 </template>
 
 <script>
-import Countdown from '@/components/Countdown'
-import Grid from '@/components/Grid'
+  import Grid from '@/components/Grid'
 
-export default {
-  components: { Countdown, Grid },
-  name: 'Game',
-  data: () => ({
-    countdown: {
-      minutes: 10,
-      seconds: 10
+  export default {
+    components: {Grid},
+    props: ['size'],
+    name: 'Game',
+    methods: {
+      reload () {
+        location.reload()
+      }
+    },
+    mounted () {
+      this.$bus.$on('end', () => {
+        document.querySelector('.mask').style.display = 'flex'
+      })
     }
-  }),
-  mounted () {
-    this.$on('end', () => {
-      document.querySelector('.mask').style.display = 'flex'
-    })
   }
-}
 </script>
 
 <style scoped>
