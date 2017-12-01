@@ -1,11 +1,11 @@
 <template>
-    <div class="container">
+    <div>
         <div class="row">
             <div class="col s4 offset-s4">
                 <countdown :countdown="this.d[difficulty].countdown"></countdown>
             </div>
         </div>
-        <div class="card lime lighten-5">
+        <div class="card lime lighten-5 col s8 offset-s2">
             <div class="card-content">
                 <div class="row">
                     <div class="col s12">
@@ -29,6 +29,10 @@
                         Vérifier        <i id="spinner" class="hide fa fa-circle-o-notch fa-1x fa-spin"
                                            aria-hidden="true"></i>
                     </a>
+                    <a id="check" href="/" class="waves-effect waves-light btn white-text text-darken-2 red">
+                        Retour
+                    </a>
+
                 </p>
             </div>
         </div>
@@ -76,7 +80,7 @@
     methods: {
       check () {
         document.querySelector('#spinner').classList.remove('hide')
-        axios.put('http://127.0.0.1:8000/check/uuid/' + this.uuid, {test: this.lines})
+        axios.put('http://thibaudrey.pro/API/web/app.php/check/uuid/' + this.uuid, {test: this.lines})
           .then((response) => {
             this.$nextTick(() => {
               document.querySelector('#check').classList.remove('white')
@@ -120,7 +124,7 @@
       }
     },
     mounted () {
-      axios.get('http://127.0.0.1:8000/size/' + this.size + /filled/ + this.d[this.difficulty].filled)
+      axios.get('http://thibaudrey.pro/API/web/app.php/size/' + this.size + /filled/ + this.d[this.difficulty].filled)
         .then((response) => {
           this.$nextTick(() => {
             this.uuid = response.data.content.uuid
@@ -139,8 +143,6 @@
 <style scoped>
     td {
         padding: 0;
-        height: 50px !important;
-        max-width: 50px !important;
     }
 
     td.content {
@@ -214,9 +216,7 @@
         margin: 0 auto;
         border-collapse: collapse;
         border-spacing: 0;
-        min-width: 500px !important;
-        max-width: 500px !important;
-        min-height: 500px !important;
-        max-height: 500px !important;
+        width: 40vw !important;
+        height: 40vw !important;
     }
 </style>
