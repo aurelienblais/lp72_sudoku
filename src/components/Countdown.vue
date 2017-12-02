@@ -1,5 +1,5 @@
 <template>
-    <div class="card lime lighten-5">
+    <div class="card blue-grey darken-3 white-text">
         <div class="card-content">
             <div id="countdown">
                 <div class="segment" id="minutes">

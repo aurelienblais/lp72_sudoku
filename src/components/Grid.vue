@@ -5,7 +5,8 @@
                 <countdown :countdown="this.d[difficulty].countdown"></countdown>
             </div>
         </div>
-        <div class="card lime lighten-5 col s8 offset-s2">
+        <div class="card blue-grey darken-3 col s8 offset-s2">
+          <br />
             <div class="card-content">
                 <div class="row">
                     <div class="col s12">
@@ -29,7 +30,7 @@
                         Vérifier        <i id="spinner" class="hide fa fa-circle-o-notch fa-1x fa-spin"
                                            aria-hidden="true"></i>
                     </a>
-                    <a id="check" href="/" class="waves-effect waves-light btn white-text text-darken-2 red">
+                    <a id="check" href="../" class="waves-effect waves-light btn white-text text-darken-2 red">
                         Retour
                     </a>
 
